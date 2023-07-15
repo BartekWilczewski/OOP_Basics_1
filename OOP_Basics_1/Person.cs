@@ -8,7 +8,7 @@ namespace OOP_Basics_1
 {
     internal class Person
     {
-        public string FirstName { get; set; }
+        public string FirstName { get; init; } 
         public string LastName { get; set; }
         public int YearOfBirth { get; set; }
 
@@ -17,7 +17,7 @@ namespace OOP_Basics_1
             return $"My name is {LastName}. {FirstName} {LastName}";
         }
 
-        public bool IsAdult()
+        protected virtual bool IsAdult()
         {
             return DateTime.Now.Year - YearOfBirth >= 18;
         }
@@ -27,7 +27,7 @@ namespace OOP_Basics_1
             Console.WriteLine("Wywołano konstruktor bezparametrowy Person");
         }
 
-        public Person(string firstName, string lastName, int yearOfBirth)
+        protected Person(string firstName, string lastName, int yearOfBirth)
         {
             FirstName = firstName;
             LastName = lastName;

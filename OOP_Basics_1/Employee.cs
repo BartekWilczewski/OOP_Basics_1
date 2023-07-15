@@ -8,7 +8,7 @@ namespace OOP_Basics_1
 {
     internal class Employee : Person
     {
-        public decimal Salary { get; set; }
+        private decimal Salary { get; set; }
 
         public Employee() 
         {
@@ -28,11 +28,14 @@ namespace OOP_Basics_1
 
         public override string ToString()
         {
-            return $"{base.ToString()}. Earning {GetSalary()}";
+            return $"{base.ToString()}. Earning {GetSalary()} {IsAdult}";
         }
 
         public virtual decimal GetSalary()
         { return Salary; }
+
+        private override bool IsAdult()
+        { return true; }
 
     }
 }
