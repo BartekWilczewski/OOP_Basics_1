@@ -7,26 +7,16 @@
             Person p = new Person("Jan", "Kowalski", 1980);
             //Person p2 = new Employee("Jan", "Kowalski", 1980, 5000);
             Employee e = new Employee("Anna", "Nowak", 1990, 6500);
-            SayHello(p);
-            
-            List<Person> list = new List<Person>();
-            list.Add(p);
+            Manager m = new Manager("Tomasz", "Kwiatkowski", 1970, 6500);
+            SayHello(e);
+
+            List<Employee> list = new List<Employee>();
             list.Add(e);
+            list.Add(m);
 
             foreach(var worker  in list)
             {
-                var casted = worker as Employee;
-                if (casted != null)
-                {
-
-                }
-                if(worker is Employee) 
-                {
-                    Employee employee = (Employee) worker;
-                    Console.WriteLine(employee.WhoAmIWithSalary());
-                }
-                else
-                    Console.WriteLine(worker.WhoAmI());
+                Console.WriteLine(worker);
             }
 
             

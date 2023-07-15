@@ -21,10 +21,18 @@ namespace OOP_Basics_1
             Console.WriteLine("Wywołano konstruktor z parametrami Employee");
         }
 
-        public string WhoAmIWithSalary()
+        //public override string WhoAmI()
+        //{
+        //    return $"{base.WhoAmI()}. Earning {Salary}";
+        //}
+
+        public override string ToString()
         {
-            return $"{WhoAmI()} Earning {Salary}";
+            return $"{base.ToString()}. Earning {GetSalary()}";
         }
+
+        public virtual decimal GetSalary()
+        { return Salary; }
 
     }
 }

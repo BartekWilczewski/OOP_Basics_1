@@ -12,7 +12,7 @@ namespace OOP_Basics_1
         public string LastName { get; set; }
         public int YearOfBirth { get; set; }
 
-        public string WhoAmI()
+        public virtual string WhoAmI()
         {
             return $"My name is {LastName}. {FirstName} {LastName}";
         }
@@ -33,6 +33,11 @@ namespace OOP_Basics_1
             LastName = lastName;
             YearOfBirth = yearOfBirth;
             Console.WriteLine("Wywołano konstruktor z parametrami Person");
+        }
+
+        public override string ToString()
+        {
+            return WhoAmI();
         }
     }
 }
