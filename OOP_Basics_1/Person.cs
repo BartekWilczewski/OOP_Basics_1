@@ -11,6 +11,7 @@ namespace OOP_Basics_1
         public string FirstName { get; init; } 
         public string LastName { get; set; }
         public int YearOfBirth { get; set; }
+        public Direction Direction { get; set; }
 
         public virtual string WhoAmI()
         {
@@ -19,6 +20,10 @@ namespace OOP_Basics_1
 
         protected virtual bool IsAdult()
         {
+            if(Direction == Direction.Left)
+            {
+                int dirAsInt = (int)Direction.Left;
+            }
             return DateTime.Now.Year - YearOfBirth >= 18;
         }
 
