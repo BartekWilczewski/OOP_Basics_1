@@ -8,11 +8,15 @@ namespace OOP_Basics_1
 {
     internal class Employee : Person
     {
+        public const int SomeConstant = 15;
+        public readonly int MinimumAge;
         private decimal Salary { get; set; }
 
         public Employee() 
         {
             Console.WriteLine("Wywołano konstruktor bezparametrowy Employee");
+            MinimumAge = 0;
+            
         }
 
         public Employee(string firstName, string lastName, int yearOfBirth, decimal salary) : base(firstName, lastName, yearOfBirth)
@@ -34,7 +38,7 @@ namespace OOP_Basics_1
         public virtual decimal GetSalary()
         { return Salary; }
 
-        private override bool IsAdult()
+        protected override bool IsAdult()
         { return true; }
 
     }

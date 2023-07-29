@@ -14,9 +14,9 @@ namespace OOP_Basics_1
             
         }
 
-        public override decimal GetSalary()
-        {
-            return Salary * 1.1m;
-        }
+        //public override decimal GetSalary()
+        //{
+        //    return Salary * 1.1m;
+        //}
     }
 }
