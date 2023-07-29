@@ -7,13 +7,18 @@ using System.Xml.Linq;
 
 namespace OOP_Basics_1
 {
-    internal class Cat : Animal
+    internal class Cat : Animal, ISoundMaker
     {
         public Cat(string name) : base(name)
         {
         }
 
-        public override void MakeSound()
+        public int GetWeight()
+        {
+            return 0;
+        }
+
+        public void MakeSound()
         {
             Console.WriteLine($"Cat {Name} makes miau");
         }

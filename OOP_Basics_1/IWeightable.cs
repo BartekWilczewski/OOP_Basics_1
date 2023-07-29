@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOP_Basics_1
 {
-    internal class Guitar : ISoundMaker
+    public interface IWeightable
     {
-        public void MakeSound()
-        {
-            Console.WriteLine($"Guitar makes brzdęk brzdęk");
-        }
+        int GetWeight();
     }
 }

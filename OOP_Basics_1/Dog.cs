@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace OOP_Basics_1
 {
-    internal class Dog : Animal
+    internal class Dog : Animal, IWeightable, ISoundMaker
     {
         public Dog(string name) : base(name)
         {
         }
 
-        public override void MakeSound()
+        public int GetWeight()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MakeSound()
         {
             Console.WriteLine($"Dog {Name} makes woof woof");
         }

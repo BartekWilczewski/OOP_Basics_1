@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOP_Basics_1
 {
-    internal abstract class SoundMaker
+    public interface ISoundMaker
     {
-        public abstract void MakeSound();
+        void MakeSound();
     }
 }

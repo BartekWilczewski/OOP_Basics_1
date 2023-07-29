@@ -10,7 +10,8 @@ namespace OOP_Basics_1
             var dog = new Dog("Azor");
             var g = new Guitar();
 
-            var sounds = new List<SoundMaker>();
+
+            var sounds = new List<ISoundMaker>();
             sounds.Add(dog);
             sounds.Add(cat);
             sounds.Add(g);
@@ -18,11 +19,11 @@ namespace OOP_Basics_1
             RecordSound(sounds);
         }
 
-        static void RecordSound(List<SoundMaker> sounds)
+        static void RecordSound(List<ISoundMaker> sounds)
         {
-            foreach (var animal in sounds)
+            foreach (var s in sounds)
             {
-                animal.MakeSound();
+                s.MakeSound();
             }
         }
     }

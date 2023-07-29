@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_Basics_1
 {
-    internal abstract class Animal : SoundMaker
+    internal abstract class Animal
     {
         public readonly string Name;
 
