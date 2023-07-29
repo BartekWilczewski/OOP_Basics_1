@@ -7,9 +7,9 @@ using System.Xml.Linq;
 
 namespace OOP_Basics_1
 {
-    internal class Cat : Animal, ISoundMaker
+    internal class Cat : Animal
     {
-        public Cat(string name) : base(name)
+        public Cat(string name, int age) : base(name, age)
         {
         }
 
@@ -18,9 +18,9 @@ namespace OOP_Basics_1
             return 0;
         }
 
-        public void MakeSound()
+        public override void MakeSound()
         {
-            Console.WriteLine($"Cat {Name} makes miau");
+            Console.WriteLine($"Cat {Name} age {Age} makes miau");
         }
 
         void X()

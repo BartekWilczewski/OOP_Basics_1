@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace OOP_Basics_1
 {
-    internal class Dog : Animal, IWeightable, ISoundMaker
+    internal class Dog : Animal, IWeightable
     {
-        public Dog(string name) : base(name)
+        public Dog(string name, int age) : base(name, age)
         {
         }
 
@@ -17,9 +17,9 @@ namespace OOP_Basics_1
             throw new NotImplementedException();
         }
 
-        public void MakeSound()
+        public override void MakeSound()
         {
-            Console.WriteLine($"Dog {Name} makes woof woof");
+            Console.WriteLine($"Dog {Name} age {Age} makes woof woof");
         }
     }
 }

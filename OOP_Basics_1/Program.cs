@@ -6,25 +6,21 @@ namespace OOP_Basics_1
     {
         static void Main(string[] args)
         {
-            var cat = new Cat("Mruczek");
-            var dog = new Dog("Azor");
-            var g = new Guitar();
+            var cat = new Cat("Mruczek", 7);
+            var dog = new Dog("Azor", 4);
+            var dog2 = new Dog("Alf", 2);
 
 
-            var sounds = new List<ISoundMaker>();
+            var sounds = new List<Animal>();
             sounds.Add(dog);
             sounds.Add(cat);
-            sounds.Add(g);
+            sounds.Add(dog2);
+            sounds.Sort(new AnimalAgeComparer());
 
-            RecordSound(sounds);
-        }
-
-        static void RecordSound(List<ISoundMaker> sounds)
-        {
-            foreach (var s in sounds)
+            foreach (var sound in sounds)
             {
-                s.MakeSound();
-            }
+                sound.MakeSound();
+            } 
         }
     }
 }
