@@ -6,6 +6,8 @@ namespace OOP_Basics_1
 {
     internal class Program
     {
+        public static string PrintPlayers { get; private set; }
+
         static void Main(string[] args)
         {
             //var cat = new Cat("Mruczek", 7);
@@ -35,11 +37,13 @@ namespace OOP_Basics_1
                 new ComplexNumbers(2, -8)
 
             };
-            MyList.Sort(new ComplexNumbersComparer());
-            foreach (var item in MyList)
-            {
-                Console.WriteLine(item.ToString());
-            }
+
+            //MyList.Sort(new ComplexNumbersComparer());
+            //foreach (var item in MyList)
+            //{
+            //    Console.WriteLine(item.ToString());
+            //}
+            Display.Print(PrintPlayers);
         }
     }
 }
