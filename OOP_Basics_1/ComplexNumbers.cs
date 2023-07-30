@@ -20,14 +20,15 @@ namespace OOP_Basics_1
         //public int CompareTo(ComplexNumbers? other)
         //{
 
-        //    // return this.Imaginary.CompareTo(other.Imaginary);
+        //    // ASCENDING SORTING
+        // return this.Imaginary.CompareTo(other.Imaginary);
         //    if (this.Imaginary != other.Imaginary)
         //        return this.Imaginary.CompareTo(other.Imaginary);
         //    return this.Real.CompareTo(other.Real);
         //}
         public int CompareTo(ComplexNumbers? other)
         {
-
+            // descending sorting
             // return this.Imaginary.CompareTo(other.Imaginary);
             if (this.Imaginary != other.Imaginary)
                 return this.Imaginary.CompareTo(other.Imaginary) * -1;

@@ -35,7 +35,7 @@ namespace OOP_Basics_1
                 new ComplexNumbers(2, -8)
 
             };
-            MyList.Sort();
+            MyList.Sort(new ComplexNumbersComparer());
             foreach (var item in MyList)
             {
                 Console.WriteLine(item.ToString());
