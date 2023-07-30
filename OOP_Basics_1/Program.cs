@@ -44,6 +44,10 @@ namespace OOP_Basics_1
             //    Console.WriteLine(item.ToString());
             //}
             Display.Print(PrintPlayers);
+
+            var Basket = new Basket();
+            Basket.ProductsList.Add(new Milk(3.2, 5));
+            Basket.ProductsList.Add(new Bread(7.8));
         }
     }
 }
